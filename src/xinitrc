@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Misc
+picom -f &
+feh --bg-fill $HOME/pix/wal/wal1.png &
+scroll &
+
+# Clock
+while true; do
+    xsetroot -name "$(date +" %R ")"
+    sleep 1m
+done &
+
+# Start dwm
+exec dwm
